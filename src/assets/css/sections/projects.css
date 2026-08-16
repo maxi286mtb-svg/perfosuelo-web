@@ -1,0 +1,187 @@
+/* ==========================================================
+   PROJECTS.CSS
+========================================================== */
+
+.projects{
+
+    padding:7rem 0;
+
+    background:#222831;
+
+    overflow:hidden;
+
+}
+
+/* ==========================================
+   LAYOUT
+========================================== */
+
+.projects__layout{
+
+    display:grid;
+
+    grid-template-columns:320px 1fr;
+
+    gap:4rem;
+
+    align-items:start;
+
+}
+
+/* ==========================================
+   COLUMNA IZQUIERDA
+========================================== */
+
+.projects__intro{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+}
+
+.projects__intro .eyebrow{
+
+    margin-bottom:1rem;
+
+}
+
+.projects__intro h2{
+
+    color:#ffffff;
+
+    margin-bottom:2rem;
+
+    line-height:1.15;
+
+}
+
+.projects__intro .btn{
+
+    margin-top:auto;
+
+}
+
+/* ==========================================
+   SLIDER
+========================================== */
+
+.projects__slider{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:2rem;
+
+}
+
+.projects__slider-row{
+
+    display:grid;
+
+    grid-template-columns:70px 1fr 70px;
+
+    align-items:center;
+
+    gap:1.5rem;
+
+}
+
+.projects__viewport{
+
+    overflow:hidden;
+
+    width:100%;
+
+}
+
+.projects__track{
+
+    display:flex;
+
+    gap:1.75rem;
+
+    transition:transform .55s ease;
+
+    will-change:transform;
+
+}
+
+.project-slide{
+
+    flex:0 0 calc((100% - 3.5rem) / 3);
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:1200px){
+
+    .projects__layout{
+
+        grid-template-columns:1fr;
+
+        gap:3rem;
+
+    }
+
+}
+
+@media(max-width:992px){
+
+    .projects__track{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .projects{
+
+        padding:5rem 0;
+
+    }
+
+    .projects__track{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .projects__intro{
+
+        text-align:center;
+
+        align-items:center;
+
+    }
+
+}
+
+@media (max-width: 992px){
+
+    .project-slide{
+
+        flex:0 0 calc((100% - 1.75rem) / 2);
+
+    }
+
+}
+
+@media (max-width: 768px){
+
+    .project-slide{
+
+        flex:0 0 100%;
+
+    }
+
+}

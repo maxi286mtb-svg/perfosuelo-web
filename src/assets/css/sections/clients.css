@@ -1,0 +1,252 @@
+/* ==========================================================
+   CLIENTS.CSS
+========================================================== */
+
+.clients{
+
+    padding:7rem 0;
+
+    background:#f1f4f7;
+
+    overflow:hidden;
+
+}
+
+/* ==========================================
+   LAYOUT
+========================================== */
+
+.clients__layout{
+
+    display:grid;
+
+    grid-template-columns:280px 1fr;
+
+    gap:5rem;
+
+    align-items:center;
+
+}
+
+/* ==========================================
+   COLUMNA IZQUIERDA
+========================================== */
+
+.clients__intro{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+}
+
+.clients__intro .eyebrow{
+
+    margin-bottom:1rem;
+
+}
+
+.clients__intro h2{
+
+    margin-bottom:1.5rem;
+
+    line-height:1.12;
+
+    max-width:260px;
+
+}
+
+.clients__intro .lead{
+
+    margin:0;
+
+}
+
+/* ==========================================
+   CARRUSEL
+========================================== */
+
+.clients__slider{
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:2rem;
+
+    overflow:hidden;
+
+}
+
+/* ==========================================
+   FADE LATERAL
+========================================== */
+
+.clients__slider::before,
+.clients__slider::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    width:120px;
+
+    height:100%;
+
+    z-index:5;
+
+    pointer-events:none;
+
+}
+
+.clients__slider::before{
+
+    left:0;
+
+    background:linear-gradient(
+        to right,
+       #f1f4f7,
+        rgba(241,244,247,0)
+    );
+
+}
+
+.clients__slider::after{
+
+    right:0;
+
+    background:linear-gradient(
+        to left,
+        #f1f4f7,
+        rgba(241,244,247,0)
+    );
+
+}
+
+/* ==========================================
+   FILAS
+========================================== */
+
+.clients__track{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:4rem;
+
+    width:max-content;
+    animation-play-state:paused;
+
+}
+
+
+.clients.active .clients__track--top{
+
+    animation:clientsLeft 40s linear infinite;
+
+}
+
+.clients.active .clients__track--bottom{
+
+    animation:clientsRight 40s linear infinite;
+
+}
+
+/* ==========================================
+   PAUSA
+========================================== */
+
+.clients__slider:hover .clients__track{
+
+    animation-play-state:paused;
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:1200px){
+
+    .clients__layout{
+
+        grid-template-columns:1fr;
+
+        gap:3rem;
+
+    }
+
+    .clients__intro{
+
+        text-align:center;
+
+        align-items:center;
+
+    }
+
+    .clients__intro h2{
+
+        max-width:none;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .clients{
+
+        padding:5rem 0;
+
+    }
+
+    .clients__track{
+
+        gap:2.5rem;
+
+    }
+
+}
+
+/* ==========================================
+   ANIMACIONES
+========================================== */
+
+@keyframes clientsLeft{
+
+    from{
+
+        transform:translateX(0);
+
+    }
+
+    to{
+
+        transform:translateX(-50%);
+
+    }
+
+}
+
+@keyframes clientsRight{
+
+    from{
+
+        transform:translateX(-50%);
+
+    }
+
+    to{
+
+        transform:translateX(0);
+
+    }
+
+}

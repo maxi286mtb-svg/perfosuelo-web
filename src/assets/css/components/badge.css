@@ -1,0 +1,29 @@
+/* ==========================================================
+   BADGE.CSS
+========================================================== */
+
+.badge {
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: .4rem .9rem;
+
+    border-radius: 999px;
+
+    background: rgba(10, 92, 168, .08);
+
+    color: var(--color-primary);
+
+    font-size: .8rem;
+
+    font-weight: var(--font-semibold);
+
+    text-transform: uppercase;
+
+    letter-spacing: .05em;
+
+    white-space: nowrap;
+
+}

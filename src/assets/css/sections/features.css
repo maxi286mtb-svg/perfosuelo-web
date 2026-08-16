@@ -1,0 +1,219 @@
+/* ==========================================================
+   FEATURES.CSS
+========================================================== */
+
+.features{
+
+    padding:7rem 0;
+
+    background:#f7f8fa;
+
+}
+
+/* ==========================================
+   LAYOUT
+========================================== */
+
+.features__layout{
+
+    display:grid;
+
+    grid-template-columns:280px 1fr;
+
+    gap:5rem;
+
+    align-items:center;
+
+}
+
+/* ==========================================
+   COLUMNA IZQUIERDA
+========================================== */
+
+.features__intro{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+}
+
+.features__intro .eyebrow{
+
+    margin-bottom:1rem;
+
+}
+
+.features__intro h2{
+
+    margin:0;
+
+    max-width:260px;
+
+    line-height:1.12;
+
+    font-size:clamp(2.3rem,3vw,3.1rem);
+
+}
+
+/* ==========================================
+   GRID
+========================================== */
+
+.features__grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:1.75rem;
+
+    align-items:start;
+
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+.feature{
+
+    text-align:center;
+
+}
+
+/* ==========================================
+   ICONO
+========================================== */
+
+.feature__icon{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:78px;
+
+    height:78px;
+
+    margin:0 auto 1.5rem;
+
+    border-radius:50%;
+
+    background:rgba(30,90,168,.08);
+
+    color:var(--color-primary);
+
+    font-size:2rem;
+
+    transition:.30s;
+
+}
+
+.feature:hover .feature__icon{
+
+    transform:translateY(-6px);
+
+    background:var(--color-primary);
+
+    color:#ffffff;
+
+}
+
+/* ==========================================
+   TITULO
+========================================== */
+
+.feature__title{
+
+    margin-bottom:.8rem;
+
+    font-size:1.2rem;
+
+}
+
+/* ==========================================
+   TEXTO
+========================================== */
+
+.feature__text{
+
+    color:var(--color-text-light);
+
+    font-size:.95rem;
+
+    line-height:1.7;
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:1200px){
+
+    .features__layout{
+
+        grid-template-columns:1fr;
+
+        gap:3rem;
+
+    }
+
+    .features__intro{
+
+        text-align:center;
+
+        align-items:center;
+
+    }
+
+    .features__intro h2{
+
+        max-width:none;
+
+    }
+
+}
+
+@media(max-width:992px){
+
+    .features__grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:2.5rem;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .features{
+
+        padding:5rem 0;
+
+    }
+
+    .features__grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:992px){
+
+    .feature::after{
+
+        display:none;
+
+    }
+
+}

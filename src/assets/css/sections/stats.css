@@ -1,0 +1,144 @@
+/* ==========================================================
+   STATS.CSS
+========================================================== */
+
+.stats {
+
+    padding: 4rem 0;
+
+    background: #f8f9fa;
+
+}
+
+.stats__grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 0;
+
+}
+
+.stats__item {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 2rem;
+
+    position: relative;
+
+}
+
+.stats__item:not(:last-child)::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:50%;
+
+    right:0;
+
+    transform:translateY(-50%);
+
+    width:1px;
+
+    height:70px;
+
+    background:#dcdcdc;
+
+}
+
+.stats__icon{
+
+    font-size:2rem;
+
+    color:var(--color-primary);
+
+    margin-bottom:1rem;
+
+}
+
+.stats__item h2{
+
+    margin-bottom:.5rem;
+
+    font-size:clamp(2.6rem,5vw,3.6rem);
+
+    font-weight:800;
+
+    color:var(--color-primary);
+
+    line-height:1;
+
+}
+
+.stats__item p{
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+    text-transform:uppercase;
+
+    letter-spacing:.12em;
+
+    color:var(--color-text-light);
+
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width:992px){
+
+    .stats__grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:2rem;
+
+    }
+
+    .stats__item::after{
+
+        display:none;
+
+    }
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width:576px){
+
+    .stats{
+
+        padding:3rem 0;
+
+    }
+
+    .stats__grid{
+
+        grid-template-columns:1fr;
+
+        gap:1.5rem;
+
+    }
+
+    .stats__item{
+
+        padding:1.5rem;
+
+    }
+
+}

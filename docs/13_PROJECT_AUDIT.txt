@@ -1,0 +1,54 @@
+# Auditoría del Proyecto
+
+## Arquitectura
+
+- [ ] Estructura de carpetas consistente
+- [ ] Componentes reutilizables
+- [ ] Secciones separadas
+- [ ] Variables organizadas
+
+---
+
+## HTML
+
+- [ ] HTML semántico
+- [ ] Un solo H1
+- [ ] Jerarquía correcta de H2 y H3
+- [ ] Imágenes con alt
+- [ ] Sin estilos inline
+
+---
+
+## CSS
+
+- [ ] Sin código duplicado
+- [ ] Variables utilizadas
+- [ ] BEM consistente
+- [ ] Responsive correcto
+
+---
+
+## JavaScript
+
+- [ ] Código modular
+- [ ] Sin variables globales
+- [ ] Eventos correctamente organizados
+
+---
+
+## SEO
+
+- [ ] Title
+- [ ] Meta Description
+- [ ] Open Graph
+- [ ] Favicons
+- [ ] Sitemap
+
+---
+
+## Performance
+
+- [ ] Lazy Loading
+- [ ] Imágenes WebP
+- [ ] SVG optimizados
+- [ ] CSS minificable

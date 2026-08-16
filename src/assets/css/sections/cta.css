@@ -1,0 +1,103 @@
+/* ==========================================================
+   CTA
+========================================================== */
+
+.cta {
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(30,90,168,.80),
+            rgba(15,42,69,.80)
+        ),
+        url("../../img/cta/cta.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    color: var(--color-white);
+
+    text-align: center;
+
+}
+
+/* ==========================================
+   CONTENIDO
+========================================== */
+
+.cta .container {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+.cta .section-heading {
+
+    max-width: 760px;
+
+    margin: 0 auto;
+
+}
+
+.cta .eyebrow {
+
+    color: rgba(255,255,255,.75);
+
+}
+
+.cta h2 {
+
+    color: var(--color-white);
+
+}
+
+.cta .lead {
+
+    color: rgba(255,255,255,.9);
+
+}
+
+/* ==========================================
+   BOTONES
+========================================== */
+
+.cta__buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: var(--space-lg);
+
+    margin-top: var(--space-xl);
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width:768px){
+
+    .cta{
+
+        background-position:center;
+
+    }
+
+    .cta__buttons{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+}

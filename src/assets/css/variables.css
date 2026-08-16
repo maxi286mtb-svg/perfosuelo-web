@@ -1,0 +1,171 @@
+/* ==========================================================
+   PERFOSUELO
+   VARIABLES GLOBALES
+========================================================== */
+
+:root {
+
+    /* ======================================================
+       COLORES
+    ====================================================== */
+
+    --color-primary: #1E5AA8;
+    --color-primary-hover: #184C8F;
+
+    --color-secondary: #143A69;
+
+    --color-white: #FFFFFF;
+    --color-black: #111827;
+
+    --color-text: #1F2937;
+    --color-text-light: #6B7280;
+
+    --color-background: #FFFFFF;
+    --color-surface: #F8FAFC;
+
+    --color-border: #E5E7EB;
+
+    --color-success: #22C55E;
+    --color-warning: #F59E0B;
+    --color-danger: #DC2626;
+
+
+    /* ======================================================
+       TIPOGRAFÍA
+    ====================================================== */
+
+    --font-primary: "Inter", sans-serif;
+
+    --font-light: 300;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+    --font-extra-bold: 800;
+
+
+    /* ======================================================
+       TAMAÑOS FLUIDOS
+    ====================================================== */
+
+    --fs-xs: clamp(.75rem, .72rem + .15vw, .80rem);
+
+    --fs-sm: clamp(.875rem, .84rem + .20vw, .95rem);
+
+    --fs-base: clamp(1rem, .96rem + .25vw, 1.05rem);
+
+    --fs-lg: clamp(1.125rem, 1.05rem + .35vw, 1.25rem);
+
+    --fs-xl: clamp(1.35rem, 1.20rem + .70vw, 1.60rem);
+
+    --fs-2xl: clamp(1.80rem, 1.50rem + 1vw, 2.30rem);
+
+    --fs-3xl: clamp(2.30rem, 2rem + 1.5vw, 3rem);
+
+    --fs-hero: clamp(3rem, 2.2rem + 2vw, 4.5rem);
+
+
+    /* ======================================================
+       ESPACIADOS
+    ====================================================== */
+
+    --space-2xs: .25rem;
+    --space-xs: .50rem;
+    --space-sm: .75rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --space-2xl: 3rem;
+    --space-3xl: 5rem;
+    --space-4xl: 7rem;
+    --section-padding: 7rem;
+
+    
+
+
+    /* ======================================================
+       CONTAINERS
+    ====================================================== */
+
+    --container-width: 1280px;
+
+    --content-width: 860px;
+
+    --container-padding: 1.5rem;
+
+    --text-width: 60ch;
+
+
+    /* ======================================================
+       RADIOS
+    ====================================================== */
+
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --radius-full: 999px;
+    
+
+
+
+
+    /* ======================================================
+       TRANSICIONES
+    ====================================================== */
+
+    --transition-fast: .20s ease;
+
+    --transition-default: .30s ease;
+
+    --transition-slow: .50s ease;
+
+
+    /* ======================================================
+       HEADER
+    ====================================================== */
+
+    --header-height: 90px;
+
+    --header-height-scroll: 72px;
+
+
+    /* ======================================================
+       Z-INDEX
+    ====================================================== */
+
+    --z-base: 1;
+
+    --z-header: 100;
+
+    --z-dropdown: 200;
+
+    --z-overlay: 300;
+
+    --z-modal: 400;
+
+    --z-tooltip: 500;
+
+
+    /* ======================================================
+       BREAKPOINTS
+       (Solo documentación)
+    ====================================================== */
+
+    /*
+        576px
+        768px
+        992px
+        1200px
+        1400px
+    */
+
+/* ==========================================
+   SHADOWS
+========================================== */
+
+--shadow-sm: 0 4px 10px rgba(0, 0, 0, .06);
+--shadow-md: 0 10px 25px rgba(0, 0, 0, .08);
+--shadow-lg: 0 20px 50px rgba(0, 0, 0, .12);
+
+}

@@ -1,0 +1,114 @@
+/* ==========================================================
+   TYPOGRAPHY.CSS
+   SISTEMA TIPOGRÁFICO
+========================================================== */
+
+/* ==========================================
+   TÍTULOS
+========================================== */
+
+h1,
+.h1 {
+    font-size: var(--fs-hero);
+    font-weight: var(--font-extra-bold);
+    line-height: 1.1;
+    color: var(--color-black);
+}
+
+h2,
+.h2 {
+    font-size: var(--fs-2xl);
+    font-weight: var(--font-bold);
+    line-height: 1.2;
+    color: var(--color-black);
+}
+
+h3,
+.h3 {
+    font-size: var(--fs-xl);
+    font-weight: var(--font-semibold);
+    line-height: 1.3;
+    color: var(--color-black);
+}
+
+h4,
+.h4 {
+    font-size: var(--fs-lg);
+    font-weight: var(--font-semibold);
+}
+
+/* ==========================================
+   PÁRRAFOS
+========================================== */
+
+p {
+    font-size: var(--fs-base);
+    color: var(--color-text);
+    line-height: 1.7;
+}
+
+/* ==========================================
+   TEXTO DESTACADO
+========================================== */
+
+.lead {
+    font-size: var(--fs-lg);
+    color: var(--color-text-light);
+    line-height: 1.8;
+    max-width: var(--text-width);
+}
+
+/* ==========================================
+   TÍTULOS DE SECCIÓN
+========================================== */
+
+.section-title {
+    margin-bottom: var(--space-md);
+    text-align: center;
+}
+
+.section-subtitle {
+    max-width: var(--text-width);
+    margin-inline: auto;
+    margin-bottom: var(--space-2xl);
+
+    color: var(--color-text-light);
+    text-align: center;
+}
+
+/* ==========================================
+   TEXTO SECUNDARIO
+========================================== */
+
+.text-muted {
+    color: var(--color-text-light);
+}
+
+.text-small {
+    font-size: var(--fs-sm);
+}
+
+/* ==========================================
+   ETIQUETA SUPERIOR (EYEBROW)
+========================================== */
+
+.eyebrow {
+    display: inline-block;
+
+    margin-bottom: var(--space-sm);
+
+    color: var(--color-primary);
+
+    font-size: var(--fs-sm);
+    font-weight: var(--font-bold);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+/* ==========================================
+   ANCHO DE LECTURA
+========================================== */
+
+.measure {
+    max-width: 65ch;
+}

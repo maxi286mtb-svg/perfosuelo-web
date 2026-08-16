@@ -1,0 +1,87 @@
+/* ==========================================================
+   SERVICES.CSS
+========================================================== */
+
+.services{
+
+    padding:7rem 0;
+
+    background:#ffffff;
+
+}
+
+.services__layout{
+
+    display:grid;
+
+    grid-template-columns:320px 1fr;
+
+    gap:4rem;
+
+    align-items:start;
+
+}
+
+.services__intro{
+
+    position:sticky;
+
+    top:120px;
+
+}
+
+.services__intro h2{
+
+    margin:1rem 0 1.5rem;
+
+}
+
+.services__intro .lead{
+
+    margin-bottom:2rem;
+
+}
+
+.services__grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:1.5rem;
+
+}
+
+@media(max-width:1200px){
+
+    .services__layout{
+
+        grid-template-columns:1fr;
+
+        gap:3rem;
+
+    }
+
+    .services__intro{
+
+        position:static;
+
+    }
+
+    .services__grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .services__grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}

@@ -1,0 +1,60 @@
+/* ==========================================================
+   CLIENT LOGO
+========================================================== */
+
+.client-logo{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex:0 0 180px;
+
+    height:95px;
+
+}
+
+/* ==========================================
+   IMAGEN
+========================================== */
+
+.client-logo img{
+
+    max-width:170px;
+
+    max-height:55px;
+
+    width:auto;
+
+    height:auto;
+
+    object-fit:contain;
+
+    filter:grayscale(100%);
+
+    opacity:.55;
+
+    transition:
+        filter .35s,
+        opacity .35s,
+        transform .35s;
+
+}
+
+/* ==========================================
+   HOVER
+========================================== */
+
+.client-logo:hover img{
+
+    filter:
+        grayscale(0)
+        drop-shadow(0 8px 20px rgba(0,0,0,.10));
+
+    opacity:1;
+
+    transform:scale(1.08);
+
+}

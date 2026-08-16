@@ -1,0 +1,153 @@
+/* ==========================================================
+   HEADER.CSS
+========================================================== */
+
+.header {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: var(--z-header);
+
+    padding: .9rem 0;
+
+    background: rgba(15,23,42,.18);
+
+    backdrop-filter: blur(10px);
+
+    transition:
+        background .35s ease,
+        box-shadow .35s ease,
+        padding .35s ease;
+
+}
+
+/* ==========================================
+   CONTENIDO
+========================================== */
+
+.header__inner {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 2rem;
+
+}
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.header__logo img {
+
+    display: block;
+
+    height: 53px;
+
+    width: auto;
+
+    transition: .35s;
+
+}
+
+/* ==========================================
+   NAVEGACIÓN
+========================================== */
+
+.header__menu {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 2rem;
+
+    list-style: none;
+
+}
+
+.header__menu a {
+
+    font-size: .90rem;
+
+    font-weight: 600;
+
+    letter-spacing: .2px;
+
+    text-transform: uppercase;
+
+    color: #fff;
+
+    transition: .3s;
+
+}
+
+.header__menu a:hover {
+
+    color: #dbeafe;
+
+}
+
+/* ==========================================
+   BOTÓN HAMBURGUESA
+========================================== */
+
+.header__toggle {
+
+    display: none;
+
+    color: var(--color-white);
+
+    font-size: 2rem;
+
+}
+
+/* ==========================================================
+   HEADER AL HACER SCROLL
+========================================================== */
+
+.header--scrolled {
+
+    background: #112945;
+
+    backdrop-filter: blur(16px);
+
+    box-shadow: 0 8px 30px rgba(0,0,0,.15);
+
+    padding: .65rem 0;
+
+}
+
+/* ==========================================
+   LOGO AL HACER SCROLL
+========================================== */
+
+.header--scrolled .header__logo img {
+
+    height: 52px;
+
+}
+
+/* ==========================================
+   NAVEGACIÓN AL HACER SCROLL
+========================================== */
+
+.header--scrolled .header__menu a {
+
+    color: #fff;
+
+}
+
+.header--scrolled .header__menu a:hover {
+
+    color: #dbeafe;
+
+}
