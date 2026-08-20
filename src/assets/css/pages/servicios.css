@@ -1,0 +1,1246 @@
+/* ==========================================================
+   SERVICIOS.CSS
+   Página de Servicios — Perfosuelo
+========================================================== */
+
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.servicios-hero {
+
+    position: relative;
+
+    min-height: 72vh;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background: var(--color-black);
+
+}
+
+
+.servicios-hero__overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: var(--z-base);
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(17, 24, 39, .90) 0%,
+            rgba(17, 24, 39, .62) 48%,
+            rgba(17, 24, 39, .20) 100%
+        );
+
+}
+
+
+.servicios-hero__container {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+}
+
+
+.servicios-hero__content {
+
+    max-width: 720px;
+
+    padding-top: 5rem;
+
+}
+
+
+.servicios-hero__title {
+
+    margin: .7rem 0 1rem;
+
+    font-size: clamp(3rem, 6vw, 5.5rem);
+
+    line-height: .95;
+
+    letter-spacing: -.04em;
+
+    color: var(--color-white);
+
+}
+
+
+.servicios-hero__subtitle {
+
+    margin: 0;
+
+    font-size: var(--fs-lg);
+
+    line-height: 1.5;
+
+    letter-spacing: .08em;
+
+    color: rgba(255, 255, 255, .82);
+
+}
+
+
+.servicios-hero__line {
+
+    display: block;
+
+    width: 70px;
+
+    height: 2px;
+
+    margin-top: var(--space-xl);
+
+    background: var(--color-primary);
+
+}
+
+
+/* ==========================================================
+   INTRODUCCIÓN
+========================================================== */
+
+.servicios-intro {
+
+    background: var(--color-white);
+
+}
+
+
+.servicios-intro__grid {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(420px, .9fr);
+
+    gap: var(--space-4xl);
+
+    align-items: center;
+
+}
+
+
+.servicios-intro__content {
+
+    max-width: 650px;
+
+}
+
+
+.servicios-intro__text {
+
+    max-width: 600px;
+
+    margin-top: var(--space-xl);
+
+}
+
+
+.servicios-intro__text p {
+
+    margin-bottom: var(--space-lg);
+
+}
+
+
+.servicios-intro__text p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+.servicios-intro__areas {
+
+    display: flex;
+
+    flex-direction: column;
+
+    border-top: 1px solid var(--color-border);
+
+}
+
+
+.servicios-area {
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 55px 1fr 30px;
+
+    column-gap: var(--space-md);
+
+    align-items: start;
+
+    padding: var(--space-lg) 0;
+
+    border-bottom: 1px solid var(--color-border);
+
+    text-decoration: none;
+
+    color: inherit;
+
+    transition:
+        padding-left var(--transition-default),
+        background var(--transition-default);
+
+}
+
+
+.servicios-area:hover {
+
+    padding-left: var(--space-xs);
+
+}
+
+
+.servicios-area__number {
+
+    font-size: var(--fs-xs);
+
+    font-weight: var(--font-semibold);
+
+    letter-spacing: .08em;
+
+    color: var(--color-primary);
+
+}
+
+
+.servicios-area h3 {
+
+    margin: 0 0 var(--space-xs);
+
+    font-size: var(--fs-lg);
+
+}
+
+
+.servicios-area p {
+
+    margin: 0;
+
+    font-size: var(--fs-sm);
+
+    line-height: 1.5;
+
+    color: var(--color-text-light);
+
+}
+
+
+.servicios-area__arrow {
+
+    align-self: center;
+
+    font-size: 1.2rem;
+
+    opacity: .55;
+
+    transition:
+        transform var(--transition-default),
+        opacity var(--transition-default);
+
+}
+
+
+.servicios-area:hover .servicios-area__arrow {
+
+    transform: translateX(5px);
+
+    opacity: 1;
+
+}
+
+
+/* ==========================================================
+   CATEGORÍAS
+========================================================== */
+
+.servicios-category {
+
+    padding: var(--section-padding) 0;
+
+}
+
+
+.servicios-category--dark {
+
+    background: var(--color-black);
+
+    color: var(--color-white);
+
+}
+
+
+.servicios-category--light {
+
+    background: var(--color-surface);
+
+}
+
+
+.servicios-category__heading {
+
+    max-width: 720px;
+
+    margin-bottom: 4rem;
+
+}
+
+
+.servicios-category--dark
+.servicios-category__heading
+.section-title {
+
+    color: var(--color-white);
+
+}
+
+
+/* ==========================================================
+   SERVICIO DESTACADO
+========================================================== */
+
+.servicio-feature {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.05fr)
+        minmax(0, .95fr);
+
+    min-height: 420px;
+
+    margin-bottom: var(--space-3xl);
+
+    overflow: hidden;
+
+}
+
+
+.servicio-feature:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+.servicio-feature__image {
+
+    min-height: 420px;
+
+    overflow: hidden;
+
+}
+
+
+.servicio-feature__image img {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform var(--transition-slow);
+
+}
+
+
+.servicio-feature:hover
+.servicio-feature__image img {
+
+    transform: scale(1.035);
+
+}
+
+
+.servicio-feature__content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: var(--space-3xl);
+
+    background: rgba(255, 255, 255, .035);
+
+}
+
+
+.servicio-feature--reverse
+.servicio-feature__image {
+
+    order: 2;
+
+}
+
+
+.servicio-feature--reverse
+.servicio-feature__content {
+
+    order: 1;
+
+}
+
+
+.servicio-feature__number {
+
+    display: block;
+
+    margin-bottom: var(--space-lg);
+
+    font-size: var(--fs-xs);
+
+    font-weight: var(--font-semibold);
+
+    letter-spacing: .1em;
+
+    color: var(--color-primary);
+
+}
+
+
+.servicio-feature__content h3 {
+
+    max-width: 520px;
+
+    margin: 0 0 var(--space-lg);
+
+    font-size: clamp(1.8rem, 3vw, 2.7rem);
+
+    line-height: 1.1;
+
+    letter-spacing: -.025em;
+
+}
+
+
+.servicio-feature__content p {
+
+    max-width: 560px;
+
+    margin: 0 0 var(--space-md);
+
+    color: rgba(255, 255, 255, .72);
+
+}
+
+
+.servicio-feature__content p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+/* ==========================================================
+   CARDS — GEOTECNIA
+========================================================== */
+
+.servicios-cards {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: var(--space-xl);
+
+}
+
+
+.servicio-detail {
+
+    overflow: hidden;
+
+    background: var(--color-white);
+
+    border: 1px solid var(--color-border);
+
+    border-radius: var(--radius-sm);
+
+    transition:
+        transform var(--transition-default),
+        box-shadow var(--transition-default);
+
+}
+
+
+.servicio-detail:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow: var(--shadow-md);
+
+}
+
+
+.servicio-detail__image {
+
+    height: 300px;
+
+    overflow: hidden;
+
+}
+
+
+.servicio-detail__image img {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform var(--transition-slow);
+
+}
+
+
+.servicio-detail:hover
+.servicio-detail__image img {
+
+    transform: scale(1.035);
+
+}
+
+
+.servicio-detail__content {
+
+    padding: var(--space-2xl);
+
+}
+
+
+.servicio-detail__number {
+
+    display: block;
+
+    margin-bottom: var(--space-md);
+
+    font-size: var(--fs-xs);
+
+    font-weight: var(--font-semibold);
+
+    letter-spacing: .1em;
+
+    color: var(--color-primary);
+
+}
+
+
+.servicio-detail__content h3 {
+
+    margin: 0 0 var(--space-lg);
+
+    font-size: var(--fs-xl);
+
+    line-height: 1.2;
+
+}
+
+
+.servicio-detail__content p {
+
+    margin: 0 0 var(--space-md);
+
+    color: var(--color-text-light);
+
+}
+
+
+.servicio-detail__content p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+/* ==========================================================
+   REHABILITACIÓN
+========================================================== */
+
+.servicios-rehabilitation {
+
+    position: relative;
+
+}
+
+
+.servicios-rehabilitation__grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 1px;
+
+    background: rgba(255, 255, 255, .12);
+
+}
+
+
+.servicio-rehabilitation {
+
+    min-height: 390px;
+
+    padding: var(--space-2xl);
+
+    background: var(--color-black);
+
+    border: 1px solid rgba(255, 255, 255, .06);
+
+    transition:
+        background var(--transition-default),
+        transform var(--transition-default);
+
+}
+
+
+.servicio-rehabilitation:hover {
+
+    background: rgba(255, 255, 255, .055);
+
+    transform: translateY(-4px);
+
+}
+
+
+.servicio-rehabilitation__number {
+
+    display: block;
+
+    margin-bottom: var(--space-3xl);
+
+    font-size: var(--fs-xs);
+
+    font-weight: var(--font-semibold);
+
+    letter-spacing: .1em;
+
+    color: var(--color-primary);
+
+}
+
+
+.servicio-rehabilitation h3 {
+
+    margin: 0 0 var(--space-lg);
+
+    font-size: var(--fs-xl);
+
+    line-height: 1.2;
+
+    color: var(--color-white);
+
+}
+
+
+.servicio-rehabilitation p {
+
+    margin: 0 0 var(--space-md);
+
+    font-size: var(--fs-sm);
+
+    line-height: 1.65;
+
+    color: rgba(255, 255, 255, .68);
+
+}
+
+
+.servicio-rehabilitation p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+/* ==========================================================
+   PROCESO
+========================================================== */
+
+.servicios-process {
+
+    background: var(--color-white);
+
+}
+
+
+.servicios-process__grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 0;
+
+    margin-top: var(--space-2xl);
+
+    border-top: 1px solid var(--color-border);
+
+}
+
+
+.servicio-process {
+
+    position: relative;
+
+    min-height: 260px;
+
+    padding: var(--space-xl) 2.2rem;
+
+    border-right: 1px solid var(--color-border);
+
+}
+
+
+.servicio-process:first-child {
+
+    border-left: 1px solid var(--color-border);
+
+}
+
+
+.servicio-process__number {
+
+    display: block;
+
+    margin-bottom: var(--space-3xl);
+
+    font-size: var(--fs-xs);
+
+    font-weight: var(--font-semibold);
+
+    letter-spacing: .1em;
+
+    color: var(--color-primary);
+
+}
+
+
+.servicio-process h3 {
+
+    margin: 0 0 var(--space-sm);
+
+    font-size: var(--fs-lg);
+
+}
+
+
+.servicio-process p {
+
+    max-width: 230px;
+
+    margin: 0;
+
+    font-size: var(--fs-sm);
+
+    line-height: 1.6;
+
+    color: var(--color-text-light);
+
+}
+
+
+/* ==========================================================
+   EQUIPAMIENTO
+========================================================== */
+
+.servicios-equipment {
+
+    background: var(--color-surface);
+
+}
+
+
+.servicios-equipment__grid {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, .8fr)
+        minmax(0, 1.2fr);
+
+    gap: var(--space-4xl);
+
+    align-items: center;
+
+}
+
+
+.servicios-equipment__content {
+
+    max-width: 540px;
+
+}
+
+
+.servicios-equipment__content p {
+
+    margin: var(--space-lg) 0 var(--space-xl);
+
+}
+
+
+.servicios-equipment__image {
+
+    height: 470px;
+
+    overflow: hidden;
+
+    border-radius: var(--radius-sm);
+
+}
+
+
+.servicios-equipment__image img {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+}
+
+
+/* ==========================================================
+   PROYECTOS
+========================================================== */
+
+.servicios-projects {
+
+    background: var(--color-white);
+
+}
+
+
+.servicios-projects .section-heading {
+
+    max-width: 680px;
+
+    margin-bottom: var(--space-2xl);
+
+}
+
+
+.servicios-projects .section-heading p {
+
+    max-width: 580px;
+
+}
+
+
+/* ==========================================================
+   CTA
+========================================================== */
+
+.servicios-cta {
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 6rem 0;
+
+    background: var(--color-black);
+
+    color: var(--color-white);
+
+}
+
+
+.servicios-cta__background {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(17, 24, 39, .98),
+            rgba(17, 24, 39, .78)
+        );
+
+}
+
+
+.servicios-cta__content {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns: 80px 1fr auto;
+
+    gap: var(--space-2xl);
+
+    align-items: center;
+
+}
+
+
+.servicios-cta__icon {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 58px;
+    height: 58px;
+
+    border: 1px solid rgba(255, 255, 255, .3);
+
+    border-radius: var(--radius-full);
+
+    font-size: 1.5rem;
+
+    color: var(--color-primary);
+
+}
+
+
+.servicios-cta__text {
+
+    max-width: 720px;
+
+}
+
+
+.servicios-cta__text h2 {
+
+    margin: var(--space-sm) 0 var(--space-md);
+
+    font-size: clamp(1.8rem, 3vw, 3rem);
+
+    line-height: 1.08;
+
+    letter-spacing: -.025em;
+
+    color: var(--color-white);
+
+}
+
+
+.servicios-cta__text p {
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, .7);
+
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 1000px) {
+
+
+    .servicios-intro__grid {
+
+        grid-template-columns: 1fr;
+
+        gap: var(--space-3xl);
+
+    }
+
+
+    .servicio-feature {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+
+    .servicio-feature__content {
+
+        padding: var(--space-2xl);
+
+    }
+
+
+    .servicios-rehabilitation__grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 0;
+
+    }
+
+
+    .servicio-rehabilitation {
+
+        min-height: auto;
+
+    }
+
+
+    .servicio-rehabilitation__number {
+
+        margin-bottom: var(--space-xl);
+
+    }
+
+
+    .servicios-process__grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    .servicio-process {
+
+        border-bottom: 1px solid var(--color-border);
+
+    }
+
+
+    .servicios-equipment__grid {
+
+        grid-template-columns: 1fr;
+
+        gap: var(--space-3xl);
+
+    }
+
+
+    .servicios-equipment__content {
+
+        max-width: 700px;
+
+    }
+
+
+    .servicios-cta__content {
+
+        grid-template-columns: 60px 1fr;
+
+    }
+
+
+    .servicios-cta__content .btn {
+
+        grid-column: 2;
+
+        justify-self: start;
+
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 700px) {
+
+
+    .servicios-hero {
+
+        min-height: 65vh;
+
+    }
+
+
+    .servicios-hero__content {
+
+        padding-top: 4rem;
+
+    }
+
+
+    .servicios-hero__title {
+
+        font-size: clamp(2.7rem, 13vw, 4rem);
+
+    }
+
+
+    .servicios-intro__grid {
+
+        gap: var(--space-2xl);
+
+    }
+
+
+    .servicios-area {
+
+        grid-template-columns: 40px 1fr 25px;
+
+        padding: var(--space-lg) 0;
+
+    }
+
+
+    .servicios-category {
+
+        padding: 5rem 0;
+
+    }
+
+
+    .servicios-category__heading {
+
+        margin-bottom: var(--space-2xl);
+
+    }
+
+
+    .servicio-feature {
+
+        grid-template-columns: 1fr;
+
+        margin-bottom: var(--space-2xl);
+
+    }
+
+
+    .servicio-feature__image {
+
+        min-height: 280px;
+
+        height: 280px;
+
+    }
+
+
+    .servicio-feature__content {
+
+        padding: var(--space-2xl) var(--space-lg);
+
+    }
+
+
+    .servicio-feature--reverse
+    .servicio-feature__image {
+
+        order: 1;
+
+    }
+
+
+    .servicio-feature--reverse
+    .servicio-feature__content {
+
+        order: 2;
+
+    }
+
+
+    .servicios-cards {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .servicio-detail__image {
+
+        height: 240px;
+
+    }
+
+
+    .servicio-detail__content {
+
+        padding: var(--space-xl) var(--space-lg);
+
+    }
+
+
+    .servicio-rehabilitation {
+
+        padding: var(--space-xl) var(--space-lg);
+
+    }
+
+
+    .servicios-process__grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .servicio-process {
+
+        min-height: auto;
+
+        padding: var(--space-lg);
+
+        border-left: 1px solid var(--color-border);
+
+    }
+
+
+    .servicio-process__number {
+
+        margin-bottom: var(--space-xl);
+
+    }
+
+
+    .servicios-equipment__image {
+
+        height: 300px;
+
+    }
+
+
+    .servicios-cta {
+
+        padding: 4.5rem 0;
+
+    }
+
+
+    .servicios-cta__content {
+
+        grid-template-columns: 1fr;
+
+        gap: var(--space-lg);
+
+    }
+
+
+    .servicios-cta__content .btn {
+
+        grid-column: auto;
+
+    }
+
+}
