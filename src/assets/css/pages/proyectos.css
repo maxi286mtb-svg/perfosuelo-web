@@ -1,0 +1,1204 @@
+/* ==========================================================
+   PROYECTOS.CSS
+   PÁGINA DE PROYECTOS
+========================================================== */
+
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.proyectos-hero {
+
+    position: relative;
+
+    min-height: 55vh;
+
+    display: flex;
+    align-items: center;
+
+    padding-top: 8rem;
+    padding-bottom: 5rem;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(15, 23, 42, .96) 0%,
+            rgba(15, 23, 42, .82) 45%,
+            rgba(15, 23, 42, .55) 100%
+        ),
+        url("../../img/projects/proyectos-hero.jpg")
+        center / cover no-repeat;
+
+    overflow: hidden;
+}
+
+
+/* Sutil degradado inferior */
+
+.proyectos-hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 90px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            var(--color-background)
+        );
+
+    pointer-events: none;
+}
+
+
+.proyectos-hero-container {
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+.proyectos-hero-content {
+
+    max-width: 720px;
+}
+
+
+.proyectos-hero .section-label {
+
+    display: inline-block;
+
+    margin-bottom: 1rem;
+
+    color: var(--color-primary);
+
+    font-size: .78rem;
+    font-weight: 600;
+
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+
+.proyectos-hero h1 {
+
+    max-width: 680px;
+
+    margin: 0 0 1.4rem;
+
+    color: #fff;
+
+    font-size: clamp(
+        2.4rem,
+        5vw,
+        4.2rem
+    );
+
+    line-height: 1.08;
+
+    letter-spacing: -.025em;
+}
+
+
+.proyectos-hero p {
+
+    max-width: 620px;
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, .78);
+
+    font-size: 1.05rem;
+
+    line-height: 1.75;
+}
+
+
+
+/* ==========================================================
+   ELEMENTOS GENERALES
+========================================================== */
+
+.proyectos-destacados,
+.proyectos-listado,
+.proyectos-cta {
+
+    position: relative;
+}
+
+
+.proyectos-destacados {
+
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+
+.proyectos-listado {
+
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+
+    background: var(--color-background-alt);
+}
+
+
+.section-header {
+
+    max-width: 720px;
+
+    margin-bottom: 3rem;
+}
+
+
+.section-header .section-label {
+
+    display: block;
+
+    margin-bottom: .75rem;
+
+    color: var(--color-primary);
+
+    font-size: .75rem;
+    font-weight: 600;
+
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+
+.section-header h2 {
+
+    margin: 0 0 1rem;
+
+    color: var(--color-heading);
+
+    font-size: clamp(
+        2rem,
+        4vw,
+        3rem
+    );
+
+    line-height: 1.15;
+
+    letter-spacing: -.02em;
+}
+
+
+.section-header p {
+
+    max-width: 620px;
+
+    margin: 0;
+
+    color: var(--color-text-muted);
+
+    line-height: 1.7;
+}
+
+
+
+/* ==========================================================
+   PROYECTOS DESTACADOS
+========================================================== */
+
+.proyectos-featured-slider {
+
+    position: relative;
+
+    min-height: 500px;
+
+    overflow: hidden;
+}
+
+
+/* ----------------------------------------------------------
+   SLIDES
+---------------------------------------------------------- */
+
+.proyecto-featured {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.35fr)
+        minmax(320px, .65fr);
+
+    min-height: 500px;
+
+    background: var(--color-surface);
+
+    border: 1px solid var(--color-border);
+
+    border-radius: 1.2rem;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateX(40px);
+
+    transition:
+        opacity .6s ease,
+        transform .6s ease,
+        visibility .6s ease;
+
+    pointer-events: none;
+}
+
+
+/* Slide activo */
+
+.proyecto-featured.is-active {
+
+    position: relative;
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateX(0);
+
+    pointer-events: auto;
+
+    z-index: 2;
+}
+
+
+/* Slide que sale hacia izquierda */
+
+.proyecto-featured.slide-exit-left {
+
+    opacity: 0;
+
+    transform: translateX(-40px);
+
+    visibility: hidden;
+
+    z-index: 1;
+}
+
+
+/* Slide que sale hacia derecha */
+
+.proyecto-featured.slide-exit-right {
+
+    opacity: 0;
+
+    transform: translateX(40px);
+
+    visibility: hidden;
+
+    z-index: 1;
+}
+
+
+/* Slide que entra desde derecha */
+
+.proyecto-featured.slide-enter-right {
+
+    opacity: 0;
+
+    transform: translateX(40px);
+
+    visibility: visible;
+
+    z-index: 3;
+}
+
+
+/* Slide que entra desde izquierda */
+
+.proyecto-featured.slide-enter-left {
+
+    opacity: 0;
+
+    transform: translateX(-40px);
+
+    visibility: visible;
+
+    z-index: 3;
+}
+
+
+
+/* ----------------------------------------------------------
+   IMAGEN
+---------------------------------------------------------- */
+
+.proyecto-featured-image {
+
+    position: relative;
+
+    min-height: 500px;
+
+    overflow: hidden;
+}
+
+
+.proyecto-featured-image::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent 55%,
+            rgba(15, 23, 42, .18)
+        );
+
+    pointer-events: none;
+}
+
+
+.proyecto-featured-image img {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform .8s ease;
+}
+
+
+.proyecto-featured.is-active
+.proyecto-featured-image img {
+
+    transform: scale(1);
+}
+
+
+.proyecto-featured:hover
+.proyecto-featured-image img {
+
+    transform: scale(1.035);
+}
+
+
+
+/* ----------------------------------------------------------
+   INFORMACIÓN
+---------------------------------------------------------- */
+
+.proyecto-featured-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 3.2rem;
+}
+
+
+.proyecto-category {
+
+    display: inline-block;
+
+    margin-bottom: 1rem;
+
+    color: var(--color-primary);
+
+    font-size: .75rem;
+
+    font-weight: 600;
+
+    letter-spacing: .12em;
+
+    text-transform: uppercase;
+}
+
+
+.proyecto-featured-content h3 {
+
+    margin: 0 0 .65rem;
+
+    color: var(--color-heading);
+
+    font-size: 2rem;
+
+    line-height: 1.15;
+}
+
+
+.proyecto-location {
+
+    margin: 0 0 1.5rem;
+
+    color: var(--color-text-muted);
+
+    font-size: .9rem;
+}
+
+
+.proyecto-featured-content > p:not(.proyecto-location) {
+
+    margin: 0 0 2rem;
+
+    color: var(--color-text-muted);
+
+    line-height: 1.7;
+}
+
+
+.proyecto-featured-content .btn {
+
+    align-self: flex-start;
+}
+
+
+
+/* ==========================================================
+   CONTROLES DEL SLIDER
+========================================================== */
+
+.proyectos-slider-controls {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 1.5rem;
+
+    margin-top: 1.8rem;
+}
+
+
+.slider-arrow {
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    color: var(--color-heading);
+
+    background: transparent;
+
+    border: 1px solid var(--color-border);
+
+    border-radius: 50%;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    transition:
+        color .25s ease,
+        background .25s ease,
+        border-color .25s ease,
+        transform .25s ease;
+}
+
+
+.slider-arrow:hover {
+
+    color: #fff;
+
+    background: var(--color-primary);
+
+    border-color: var(--color-primary);
+
+    transform: translateY(-2px);
+}
+
+
+.slider-indicators {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: .55rem;
+}
+
+
+.slider-indicators button {
+
+    width: 7px;
+    height: 7px;
+
+    padding: 0;
+
+    background: var(--color-border);
+
+    border: 0;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    transition:
+        width .25s ease,
+        background .25s ease;
+}
+
+
+.slider-indicators button.active {
+
+    width: 24px;
+
+    background: var(--color-primary);
+
+    border-radius: 10px;
+}
+
+
+
+/* ==========================================================
+   FILTROS
+========================================================== */
+
+.proyectos-filtros {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    gap: .55rem;
+
+    margin-bottom: 2.8rem;
+}
+
+
+.filtro {
+
+    padding: .65rem 1rem;
+
+    color: var(--color-text-muted);
+
+    background: transparent;
+
+    border: 1px solid var(--color-border);
+
+    border-radius: 999px;
+
+    font-family: inherit;
+
+    font-size: .82rem;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition:
+        color .25s ease,
+        background .25s ease,
+        border-color .25s ease,
+        transform .25s ease;
+}
+
+
+.filtro:hover {
+
+    color: var(--color-heading);
+
+    border-color: var(--color-primary);
+
+    transform: translateY(-1px);
+}
+
+
+.filtro.active {
+
+    color: #fff;
+
+    background: var(--color-primary);
+
+    border-color: var(--color-primary);
+}
+
+
+
+/* ==========================================================
+   GRILLA DE PROYECTOS
+========================================================== */
+
+.proyectos-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 1.5rem;
+}
+
+
+
+/* ==========================================================
+   TARJETA
+========================================================== */
+
+.proyecto-card {
+
+    background: var(--color-surface);
+
+    border: 1px solid var(--color-border);
+
+    border-radius: 1rem;
+
+    overflow: hidden;
+
+    transition:
+        transform .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+}
+
+
+.proyecto-card:hover {
+
+    transform: translateY(-5px);
+
+    border-color:
+        rgba(255, 255, 255, .14);
+
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, .18);
+}
+
+
+
+/* Imagen */
+
+.proyecto-card-image {
+
+    position: relative;
+
+    height: 230px;
+
+    overflow: hidden;
+}
+
+
+.proyecto-card-image img {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform .5s ease;
+}
+
+
+.proyecto-card:hover
+.proyecto-card-image img {
+
+    transform: scale(1.05);
+}
+
+
+
+/* Categoría sobre imagen */
+
+.proyecto-card-category {
+
+    position: absolute;
+
+    left: 1rem;
+    bottom: 1rem;
+
+    padding: .42rem .7rem;
+
+    color: #fff;
+
+    background: rgba(15, 23, 42, .82);
+
+    border: 1px solid rgba(255, 255, 255, .12);
+
+    border-radius: 999px;
+
+    backdrop-filter: blur(8px);
+
+    font-size: .68rem;
+    font-weight: 600;
+
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+
+
+/* Contenido */
+
+.proyecto-card-content {
+
+    padding: 1.4rem 1.45rem 1.5rem;
+}
+
+
+.proyecto-card-content h3 {
+
+    margin: 0 0 .5rem;
+
+    color: var(--color-heading);
+
+    font-size: 1.15rem;
+
+    line-height: 1.3;
+}
+
+
+.proyecto-card-location {
+
+    margin: 0 0 1.25rem;
+
+    color: var(--color-text-muted);
+
+    font-size: .82rem;
+}
+
+
+
+/* Link */
+
+.proyecto-link {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: .5rem;
+
+    color: var(--color-heading);
+
+    font-size: .82rem;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        color .25s ease,
+        gap .25s ease;
+}
+
+
+.proyecto-link span {
+
+    transition:
+        transform .25s ease;
+}
+
+
+.proyecto-link:hover {
+
+    color: var(--color-primary);
+
+    gap: .7rem;
+}
+
+
+.proyecto-link:hover span {
+
+    transform: translateX(2px);
+}
+
+
+
+/* ==========================================================
+   ESTADO DE FILTRO
+========================================================== */
+
+.proyecto-card.is-hidden {
+
+    display: none;
+}
+
+
+.proyecto-card.is-visible {
+
+    animation:
+        proyectoFadeIn .35s ease both;
+}
+
+
+@keyframes proyectoFadeIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(8px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+
+/* ==========================================================
+   CTA
+========================================================== */
+
+.proyectos-cta {
+
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+
+    background: var(--color-background);
+}
+
+
+.proyectos-cta-content {
+
+    max-width: 760px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+.proyectos-cta .section-label {
+
+    display: block;
+
+    margin-bottom: .8rem;
+
+    color: var(--color-primary);
+
+    font-size: .75rem;
+    font-weight: 600;
+
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+
+.proyectos-cta h2 {
+
+    margin: 0 0 1rem;
+
+    color: var(--color-heading);
+
+    font-size: clamp(
+        2rem,
+        4vw,
+        3rem
+    );
+
+    line-height: 1.15;
+}
+
+
+.proyectos-cta p {
+
+    max-width: 600px;
+
+    margin: 0 auto 1.8rem;
+
+    color: var(--color-text-muted);
+
+    line-height: 1.7;
+}
+
+
+
+/* ==========================================================
+   BOTONES
+========================================================== */
+
+.proyectos-page .btn {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 44px;
+
+    padding: .7rem 1.2rem;
+
+    border-radius: 999px;
+
+    font-size: .82rem;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        background .25s ease,
+        color .25s ease,
+        border-color .25s ease,
+        transform .25s ease;
+}
+
+
+.proyectos-page .btn:hover {
+
+    transform: translateY(-2px);
+}
+
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 992px) {
+
+
+    .proyectos-hero {
+
+        min-height: 50vh;
+
+        padding-top: 7.5rem;
+    }
+
+
+    .proyecto-featured {
+
+    grid-template-columns: 1fr;
+
+    min-height: 650px;
+}
+
+
+.proyecto-featured-image {
+
+    min-height: 400px;
+}
+
+
+    .proyecto-featured-content {
+
+        padding: 2.5rem;
+    }
+
+
+    .proyectos-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 680px) {
+
+
+    .proyectos-hero {
+
+        min-height: 58vh;
+
+        padding-top: 7rem;
+        padding-bottom: 4rem;
+    }
+
+
+    .proyectos-hero h1 {
+
+        font-size: 2.35rem;
+    }
+
+
+    .proyectos-hero p {
+
+        font-size: .95rem;
+    }
+
+
+    .section-header {
+
+        margin-bottom: 2rem;
+    }
+
+
+    .section-header h2 {
+
+        font-size: 2rem;
+    }
+
+
+    .proyectos-destacados,
+    .proyectos-listado {
+
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+
+    /* ------------------------------------------------------
+       SLIDER DESTACADOS
+    ------------------------------------------------------ */
+
+    .proyectos-featured-slider {
+
+        min-height: 600px;
+    }
+
+
+    .proyecto-featured {
+
+        min-height: 600px;
+
+        border-radius: .9rem;
+    }
+
+
+    .proyecto-featured-image {
+
+        min-height: 280px;
+    }
+
+
+    .proyecto-featured-content {
+
+        padding: 2rem 1.5rem;
+    }
+
+
+    .proyecto-featured-content h3 {
+
+        font-size: 1.6rem;
+    }
+
+
+    /* ------------------------------------------------------
+       FILTROS
+    ------------------------------------------------------ */
+
+    .proyectos-filtros {
+
+        gap: .45rem;
+
+        margin-bottom: 2rem;
+    }
+
+
+    .filtro {
+
+        padding: .55rem .8rem;
+
+        font-size: .75rem;
+    }
+
+
+    /* ------------------------------------------------------
+       GRILLA DE PROYECTOS
+    ------------------------------------------------------ */
+
+    .proyectos-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 1.2rem;
+    }
+
+
+    .proyecto-card-image {
+
+        height: 220px;
+    }
+
+
+    .proyecto-card-content {
+
+        padding: 1.25rem;
+    }
+
+
+    /* ------------------------------------------------------
+       CTA
+    ------------------------------------------------------ */
+
+    .proyectos-cta {
+
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+
+    .proyectos-cta h2 {
+
+        font-size: 2rem;
+    }
+
+
+}
+
+/* ==========================================================
+   PANTALLAS MUY PEQUEÑAS
+========================================================== */
+
+@media (max-width: 400px) {
+
+
+    .proyectos-hero h1 {
+
+        font-size: 2.1rem;
+    }
+
+
+    .proyecto-featured-image {
+
+        min-height: 240px;
+    }
+
+
+    .proyecto-featured-content {
+
+        padding: 1.5rem 1.2rem;
+    }
+
+
+    .proyecto-featured-content h3 {
+
+        font-size: 1.45rem;
+    }
+
+
+    .proyectos-slider-controls {
+
+        gap: 1rem;
+    }
+
+
+}

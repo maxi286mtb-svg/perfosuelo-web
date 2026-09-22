@@ -1,0 +1,20 @@
+# Estándares de desarrollo
+
+## Arquitectura
+
+- Componentes reutilizables en `components`
+- Secciones de la página en `sections`
+- Variables globales en `variables.css`
+- Utilidades en `utilities.css`
+
+## Convenciones
+
+- HTML semántico.
+- CSS con metodología BEM.
+- No usar estilos inline.
+- No repetir valores mágicos (usar variables).
+- Mantener componentes reutilizables.
+
+## Objetivo
+
+Construir una web escalable, fácil de mantener y preparada para crecer.

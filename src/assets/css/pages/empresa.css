@@ -1,0 +1,1367 @@
+/* ==========================================================
+   PERFOSUELO
+   EMPRESA PAGE
+========================================================== */
+
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.empresa-hero {
+
+    position: relative;
+
+    min-height: 620px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background-image:
+        url("../../img/company/empresa-hero.jpg");
+
+    background-size: cover;
+    background-position: center center;
+
+    color: #ffffff;
+
+}
+
+
+.empresa-hero__overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(10, 20, 30, 0.92) 0%,
+            rgba(10, 20, 30, 0.72) 42%,
+            rgba(10, 20, 30, 0.25) 100%
+        );
+
+}
+
+
+.empresa-hero__container {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.empresa-hero__content {
+
+    max-width: 680px;
+
+    padding-top: 80px;
+
+}
+
+
+.empresa-hero__title {
+
+    margin: 1rem 0 0.8rem;
+
+    color: #ffffff;
+
+    font-size: clamp(
+        3.2rem,
+        7vw,
+        5.8rem
+    );
+
+    font-weight: 800;
+
+    line-height: 0.95;
+
+    letter-spacing: -0.04em;
+
+}
+
+
+.empresa-hero__subtitle {
+
+    max-width: 520px;
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: clamp(
+        1.15rem,
+        2vw,
+        1.65rem
+    );
+
+    font-weight: 700;
+
+    line-height: 1.4;
+
+    letter-spacing: 0.01em;
+
+}
+
+
+.empresa-hero__line {
+
+    display: block;
+
+    width: 65px;
+
+    height: 4px;
+
+    margin-top: 1.8rem;
+
+    background: var(--color-primary);
+
+}
+
+
+/* ==========================================================
+   QUIÉNES SOMOS
+========================================================== */
+
+.empresa-about {
+
+    background: #ffffff;
+
+}
+
+
+.empresa-about__grid {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    align-items: stretch;
+
+    gap: clamp(
+        3rem,
+        6vw,
+        5rem
+    );
+
+}
+
+
+.empresa-about__content {
+
+    max-width: 600px;
+
+}
+
+
+.empresa-about .section-title span {
+
+    color: var(--color-primary);
+
+}
+
+
+.empresa-about__text {
+
+    margin: 2rem 0;
+
+}
+
+
+.empresa-about__text p {
+
+    margin: 0 0 1rem;
+
+    color: #66717d;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+}
+
+
+.empresa-about__text p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+/* ==========================================================
+   GALERÍA EMPRESA
+========================================================== */
+
+.empresa-gallery {
+
+    display: grid;
+
+    /*
+       La imagen principal ocupa el espacio disponible
+       y las miniaturas quedan a la derecha.
+    */
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        100px;
+
+    gap: .6rem;
+
+    width: 100%;
+
+    height: 100%;
+
+    min-width: 0;
+
+    min-height: 0;
+
+    align-items: stretch;
+
+}
+
+
+/* ==========================================================
+   IMAGEN PRINCIPAL
+========================================================== */
+
+.empresa-gallery__main {
+
+    /*
+       La imagen toma la altura de la fila del contenido
+       de "Quiénes somos".
+    */
+
+    height: 100%;
+
+    min-width: 0;
+
+    min-height: 0;
+
+    aspect-ratio: 1 / 1;
+
+    overflow: hidden;
+
+    border-radius: 4px;
+
+    background: #e9edf1;
+
+}
+
+
+.empresa-gallery__main img {
+
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        opacity .25s ease;
+
+}
+
+
+/* ==========================================================
+   MINIATURAS
+========================================================== */
+
+.empresa-gallery__thumbs {
+
+    display: grid;
+
+    grid-template-rows:
+        repeat(4, minmax(0, 1fr));
+
+    gap: .6rem;
+
+    height: 100%;
+
+    min-height: 0;
+
+}
+
+
+.empresa-gallery__thumb {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 0;
+
+    padding: 0;
+
+    border:
+        2px solid transparent;
+
+    border-radius: 4px;
+
+    overflow: hidden;
+
+    background: none;
+
+    cursor: pointer;
+
+    opacity: .65;
+
+    transition:
+        opacity .25s ease,
+        border-color .25s ease,
+        transform .25s ease;
+
+}
+
+
+.empresa-gallery__thumb img {
+
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+.empresa-gallery__thumb:hover {
+
+    opacity: .9;
+
+    transform: translateX(-2px);
+
+}
+
+
+.empresa-gallery__thumb.is-active {
+
+    opacity: 1;
+
+    border-color:
+        var(--color-primary);
+
+}
+
+
+/* ==========================================================
+   ANTIGUA IMAGEN DE EMPRESA
+   Se mantiene por compatibilidad.
+========================================================== */
+
+.empresa-about__image {
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 8px;
+
+}
+
+
+.empresa-about__image::after {
+
+    content: "";
+
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+
+    width: 35%;
+    height: 5px;
+
+    background:
+        var(--color-primary);
+
+}
+
+
+.empresa-about__image img {
+
+    display: block;
+
+    width: 100%;
+
+    aspect-ratio: 4 / 3;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.6s ease;
+
+}
+
+
+.empresa-about__image:hover img {
+
+    transform: scale(1.035);
+
+}
+
+
+/* ==========================================================
+   EXPERIENCIA / ESTADÍSTICAS
+========================================================== */
+
+.empresa-stats {
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 7rem 0;
+
+    background: #172330;
+
+    color: #ffffff;
+
+}
+
+
+.empresa-stats__background {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(14, 27, 40, 0.88),
+            rgba(14, 27, 40, 0.94)
+        ),
+        url("../../img/company/empresa-experiencia.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    opacity: 0.95;
+
+}
+
+
+.empresa-stats .container {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.empresa-stats .section-title {
+
+    color: #ffffff;
+
+}
+
+
+.empresa-stats .section-eyebrow {
+
+    color: #75b3ff;
+
+}
+
+
+.empresa-stats__grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    margin-top: 4rem;
+
+}
+
+
+.empresa-stat {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 190px;
+
+    padding: 1rem 2rem;
+
+    text-align: center;
+
+    border-right:
+        1px solid rgba(255, 255, 255, 0.22);
+
+}
+
+
+.empresa-stat:last-child {
+
+    border-right: none;
+
+}
+
+
+.empresa-stat__icon {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    margin-bottom: 1.2rem;
+
+    border:
+        1px solid rgba(255,255,255,.35);
+
+    border-radius: 50%;
+
+    color: #ffffff;
+
+    font-size: 0.7rem;
+
+    font-weight: 700;
+
+}
+
+
+.empresa-stat__number {
+
+    display: block;
+
+    color: #4a98f7;
+
+    font-size: clamp(
+        2.7rem,
+        4vw,
+        4rem
+    );
+
+    font-weight: 800;
+
+    line-height: 1;
+
+}
+
+
+.empresa-stat__label {
+
+    margin-top: 0.9rem;
+
+    color: #ffffff;
+
+    font-size: 0.82rem;
+
+    font-weight: 700;
+
+    line-height: 1.45;
+
+    letter-spacing: 0.05em;
+
+}
+
+
+/* ==========================================================
+   PILARES
+========================================================== */
+
+.empresa-values {
+
+    background: #ffffff;
+
+}
+
+
+.empresa-values__grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 1rem;
+
+    margin-top: 3.5rem;
+
+}
+
+
+.empresa-value {
+
+    min-height: 280px;
+
+    padding: 2.5rem 1.7rem;
+
+    text-align: center;
+
+    border:
+        1px solid #e3e7eb;
+
+    border-radius: 6px;
+
+    background: #ffffff;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+
+}
+
+
+.empresa-value:hover {
+
+    transform: translateY(-6px);
+
+    border-color:
+        rgba(30, 90, 168, 0.25);
+
+    box-shadow:
+        0 18px 40px
+        rgba(20, 35, 50, 0.08);
+
+}
+
+
+.empresa-value__icon {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 58px;
+    height: 58px;
+
+    margin: 0 auto 1.5rem;
+
+    border:
+        1px solid rgba(30, 90, 168, 0.20);
+
+    border-radius: 50%;
+
+    color:
+        var(--color-primary);
+
+    font-size: 1.4rem;
+
+    font-weight: 700;
+
+}
+
+
+.empresa-value__title {
+
+    margin: 0 0 1rem;
+
+    color: #202a34;
+
+    font-size: 1rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.02em;
+
+}
+
+
+.empresa-value__text {
+
+    margin: 0;
+
+    color: #68727d;
+
+    font-size: 0.9rem;
+
+    line-height: 1.75;
+
+}
+
+
+/* ==========================================================
+   EQUIPAMIENTO
+========================================================== */
+
+.empresa-equipment {
+
+    background: #f4f6f8;
+
+}
+
+
+.empresa-equipment__grid {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(280px, 0.8fr)
+        minmax(0, 1.2fr);
+
+    align-items: center;
+
+    gap: 4.5rem;
+
+}
+
+
+.empresa-equipment__content {
+
+    max-width: 500px;
+
+}
+
+
+.empresa-equipment .section-title span {
+
+    color:
+        var(--color-primary);
+
+}
+
+
+.empresa-equipment__content > p {
+
+    margin: 1.5rem 0 2rem;
+
+    color: #68727d;
+
+    line-height: 1.8;
+
+}
+
+
+.empresa-equipment__gallery {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 0.8rem;
+
+}
+
+
+.empresa-equipment__item {
+
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 360px;
+
+    border-radius: 7px;
+
+}
+
+
+.empresa-equipment__item img {
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    min-height: 360px;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.6s ease;
+
+}
+
+
+.empresa-equipment__item:hover img {
+
+    transform: scale(1.06);
+
+}
+
+
+/* ==========================================================
+   CTA
+========================================================== */
+
+.empresa-cta {
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 4rem 0;
+
+    background:
+        var(--color-primary);
+
+    color: #ffffff;
+
+}
+
+
+.empresa-cta__background {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(30, 90, 168, 0.91),
+            rgba(30, 90, 168, 0.91)
+        ),
+        url("../../img/company/empresa-cta.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+
+.empresa-cta .container {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.empresa-cta__content {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 2rem;
+
+}
+
+
+.empresa-cta__icon {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 64px;
+    height: 64px;
+
+    flex-shrink: 0;
+
+    border:
+        1px solid rgba(255,255,255,.35);
+
+    border-radius: 50%;
+
+    color: #ffffff;
+
+    font-size: 2rem;
+
+}
+
+
+.empresa-cta__text {
+
+    flex: 1;
+
+}
+
+
+.empresa-cta__text h2 {
+
+    margin: 0 0 0.5rem;
+
+    color: #ffffff;
+
+    font-size: clamp(
+        1.5rem,
+        3vw,
+        2.35rem
+    );
+
+    font-weight: 800;
+
+    line-height: 1.15;
+
+}
+
+
+.empresa-cta__text p {
+
+    margin: 0;
+
+    color:
+        rgba(255,255,255,.88);
+
+    font-size: 1rem;
+
+}
+
+
+.empresa-cta .btn {
+
+    flex-shrink: 0;
+
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 1100px) {
+
+    .empresa-about__grid {
+
+        gap: 3.5rem;
+
+    }
+
+
+    .empresa-equipment__grid {
+
+        gap: 3rem;
+
+    }
+
+
+    .empresa-stat {
+
+        padding:
+            1rem 1.2rem;
+
+    }
+
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 992px) {
+
+    /* HERO */
+
+    .empresa-hero {
+
+        min-height: 540px;
+
+    }
+
+
+    /* ABOUT */
+
+    .empresa-about__grid {
+
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(0, 1fr);
+
+        gap: 2.5rem;
+
+    }
+
+
+    /* GALERÍA */
+
+    .empresa-gallery {
+
+        grid-template-columns:
+            minmax(0, 1fr)
+            100px;
+
+    }
+
+
+    /* STATS */
+
+    .empresa-stats__grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        margin-top: 3rem;
+
+    }
+
+
+    .empresa-stat:nth-child(2) {
+
+        border-right: none;
+
+    }
+
+
+    .empresa-stat:nth-child(-n + 2) {
+
+        border-bottom:
+            1px solid rgba(255,255,255,.22);
+
+    }
+
+
+    /* VALUES */
+
+    .empresa-values__grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    /* EQUIPMENT */
+
+    .empresa-equipment__grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .empresa-equipment__content {
+
+        max-width: 650px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 768px) {
+
+    /* HERO */
+
+    .empresa-hero {
+
+        min-height: 500px;
+
+    }
+
+
+    .empresa-hero__content {
+
+        padding-top: 60px;
+
+    }
+
+
+    /* ABOUT */
+
+    .empresa-about__grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 2.5rem;
+
+    }
+
+
+    .empresa-about__content {
+
+        max-width: none;
+
+    }
+
+
+    /*
+       En móvil la galería vuelve a una estructura
+       vertical.
+    */
+
+    .empresa-gallery {
+
+        grid-template-columns:
+            1fr;
+
+        width: 100%;
+
+        height: auto;
+
+    }
+
+
+    .empresa-gallery__main {
+
+        width: 100%;
+
+        height: auto;
+
+        aspect-ratio: 1 / 1;
+
+    }
+
+
+    .empresa-gallery__thumbs {
+
+        grid-template-columns:
+            repeat(4, 1fr);
+
+        grid-template-rows: none;
+
+        height: auto;
+
+        gap: .5rem;
+
+    }
+
+
+    .empresa-gallery__thumb {
+
+        aspect-ratio: 1 / 1;
+
+    }
+
+
+    /* STATS */
+
+    .empresa-stats {
+
+        padding: 5rem 0;
+
+    }
+
+
+    /* EQUIPMENT */
+
+    .empresa-equipment__gallery {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .empresa-equipment__item {
+
+        min-height: 300px;
+
+    }
+
+
+    .empresa-equipment__item img {
+
+        min-height: 300px;
+
+    }
+
+
+    .empresa-equipment__item:last-child {
+
+        display: none;
+
+    }
+
+
+    /* CTA */
+
+    .empresa-cta__content {
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .empresa-cta__text {
+
+        flex-basis:
+            calc(100% - 90px);
+
+    }
+
+
+    .empresa-cta .btn {
+
+        margin-left: 86px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
+
+@media (max-width: 576px) {
+
+    /* HERO */
+
+    .empresa-hero {
+
+        min-height: 460px;
+
+        background-position:
+            60% center;
+
+    }
+
+
+    .empresa-hero__overlay {
+
+        background:
+            linear-gradient(
+                90deg,
+                rgba(10, 20, 30, 0.94),
+                rgba(10, 20, 30, 0.58)
+            );
+
+    }
+
+
+    .empresa-hero__content {
+
+        padding-top: 50px;
+
+    }
+
+
+    .empresa-hero__title {
+
+        font-size: 3rem;
+
+    }
+
+
+    /* STATS */
+
+    .empresa-stats__grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .empresa-stat {
+
+        min-height: 160px;
+
+        border-right: none;
+
+        border-bottom:
+            1px solid rgba(255,255,255,.22);
+
+    }
+
+
+    .empresa-stat:last-child {
+
+        border-bottom: none;
+
+    }
+
+
+    .empresa-stat:nth-child(2) {
+
+        border-right: none;
+
+    }
+
+
+    /* VALUES */
+
+    .empresa-values__grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .empresa-value {
+
+        min-height: auto;
+
+    }
+
+
+    /* EQUIPMENT */
+
+    .empresa-equipment__gallery {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .empresa-equipment__item {
+
+        min-height: 280px;
+
+    }
+
+
+    .empresa-equipment__item img {
+
+        min-height: 280px;
+
+    }
+
+
+    .empresa-equipment__item:last-child {
+
+        display: block;
+
+    }
+
+
+    /* CTA */
+
+    .empresa-cta__content {
+
+        display: grid;
+
+        grid-template-columns:
+            60px 1fr;
+
+        gap: 1rem;
+
+    }
+
+
+    .empresa-cta__text {
+
+        flex-basis: auto;
+
+    }
+
+
+    .empresa-cta .btn {
+
+        grid-column:
+            1 / -1;
+
+        margin-left: 0;
+
+    }
+
+}

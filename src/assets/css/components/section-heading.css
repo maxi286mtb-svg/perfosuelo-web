@@ -1,0 +1,89 @@
+/* ==========================================================
+   SECTION-HEADING.CSS
+========================================================== */
+
+.section-heading{
+
+    max-width:700px;
+
+    margin:0 auto 3.5rem;
+
+    text-align:center;
+
+}
+
+.section-heading h2{
+
+    margin:1rem 0;
+
+}
+
+.section-heading .lead{
+
+    color:var(--color-text-light);
+
+}
+
+/* ==========================================================
+   ENCABEZADO DIVIDIDO
+========================================================== */
+
+.section-heading--split{
+
+    max-width:none;
+
+    margin-bottom:3.5rem;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-end;
+
+    gap:3rem;
+
+    text-align:left;
+
+}
+
+.section-heading--split > div{
+
+    max-width:700px;
+
+}
+
+.section-heading--split h2{
+
+    margin:1rem 0;
+
+}
+
+.section-heading--split .lead{
+
+    margin:0;
+
+}
+
+.section-heading--split .btn{
+
+    flex-shrink:0;
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width:992px){
+
+    .section-heading--split{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:2rem;
+
+    }
+
+}

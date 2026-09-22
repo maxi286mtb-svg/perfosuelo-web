@@ -1,0 +1,66 @@
+/* ==========================================================
+   LAYOUT.CSS
+   ESTRUCTURA GENERAL
+========================================================== */
+
+/* Container principal */
+
+.container {
+    width: min(100% - 2rem, var(--container-width));
+    margin-inline: auto;
+}
+
+/* Container para textos */
+
+.content-container {
+    width: min(100% - 2rem, var(--content-width));
+    margin-inline: auto;
+}
+
+/* Secciones */
+
+.section {
+    padding-block: var(--section-padding);
+}
+
+/* Grid de dos columnas */
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-2xl);
+}
+
+/* Grid de tres columnas */
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+}
+
+/* Grid de cuatro columnas */
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-xl);
+}
+
+/* Flex */
+
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
