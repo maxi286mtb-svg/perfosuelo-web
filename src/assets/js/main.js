@@ -24,7 +24,9 @@ const clientsObserver = new IntersectionObserver((entries)=>{
     threshold:0.35
 });
 
-clientsObserver.observe(clientsSection);
+if (clientsSection) {
+    clientsObserver.observe(clientsSection);
+}
 
 /* ==========================================================
    ESTADÍSTICAS
@@ -53,7 +55,7 @@ const statsObserver = new IntersectionObserver((entries) => {
 
                 const rawProgress = Math.min((now - start) / duration, 1);
 
-const progress = 1 - Math.pow(1 - rawProgress, 3);
+                const progress = 1 - Math.pow(1 - rawProgress, 3);
 
                 const current = Math.floor(progress * target);
 
@@ -65,17 +67,17 @@ const progress = 1 - Math.pow(1 - rawProgress, 3);
 
                 }else{
 
-    if(target >= 1000){
+                    if(target >= 1000){
 
-        counter.textContent = "+" + target.toLocaleString("es-AR");
+                        counter.textContent = "+" + target.toLocaleString("es-AR");
 
-    }else{
+                    }else{
 
-        counter.textContent = target.toLocaleString("es-AR") + "+";
+                        counter.textContent = target.toLocaleString("es-AR") + "+";
 
-    }
+                    }
 
-}
+                }
 
             }
 
@@ -89,4 +91,6 @@ const progress = 1 - Math.pow(1 - rawProgress, 3);
     threshold:0.4
 });
 
-statsObserver.observe(statsSection);
+if (statsSection) {
+    statsObserver.observe(statsSection);
+}
