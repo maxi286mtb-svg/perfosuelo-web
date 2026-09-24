@@ -1060,7 +1060,7 @@
 
     .empresa-hero {
 
-        min-height: 500px;
+        min-height: 60vh;
 
     }
 
@@ -1216,7 +1216,7 @@
 
     .empresa-hero {
 
-        min-height: 460px;
+        min-height: 60vh;
 
         background-position:
             60% center;
